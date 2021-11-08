@@ -4,15 +4,41 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-    <style>
-      body {
-        background-color: #16152b;
-      }
-    </style>
+    <title>Ezone Sign-up Form</title>
   </head>
   <body>
-    <div id="app"></div>
+    <main>
+      <h1>EZONE STUFF</h1>
+      <button>Sign Up Now</button>
+      <section>
+        <div class="modal-container">
+          <div class="modal-page-container">
+            <div class="modal-page">
+              <h2>Sign up</h2>
+              <p>description text</p>
+            </div>
+          </div>
+          <div class="modal-page-container active">
+            <div class="modal-page">
+              <h2>Personalize</h2>
+              <p>description text</p>
+              <div>
+                <div>filter</div>
+                <div>quiz</div>
+              </div>
+              <section class="filter-container hidden"></section>
+              <section class="quiz-container"></section>
+            </div>
+          </div>
+          <div class="modal-page-container">
+            <div class="modal-page">
+              <h2>Thank you!</h2>
+              <p>description text</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,23 @@
+.modal-container {
+  background-color: hotpink;
+  height: 500px;
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.modal-page-container {
+  height: inherit;
+  width: 4rem;
+  background-color: yellow;
+}
+
+.modal-page-container.active {
+  width: 350px;
+}
+
+.modal-page-container:not(.active) > * {
+  display: none;
+}
