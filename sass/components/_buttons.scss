@@ -1,0 +1,43 @@
+@use "../base/colors";
+
+.button-main {
+  display: block;
+  border-radius: 140px;
+  border: 0px;
+  background-color: colors.$green-color;
+  padding: 1rem 2rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+  box-shadow: -2px 3px 4px 0px rgb(185 248 185 / 75%);
+  -webkit-box-shadow: -2px 3px 4px 0px rgb(185 248 185 / 75%);
+  -moz-box-shadow: -2px 3px 4px 0px rgb(185 248 185 / 75%);
+}
+
+.button-main:hover {
+  background: colors.$orange-color;
+  color: colors.$background-color;
+}
+
+.close {
+  top: 32px;
+  width: 32px;
+  height: 32px;
+}
+
+.close:before,
+.close:after {
+  position: absolute;
+  content: " ";
+  height: 32px;
+  width: 4px;
+  background-color: colors.$orange-color;
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
+
+.close:after {
+  transform: rotate(-45deg);
+}
