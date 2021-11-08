@@ -4,6 +4,11 @@
   align-items: center;
 }
 
+#first-modal form {
+  display: flex;
+  flex-direction: column;
+}
+
 .input-container {
   position: relative;
   margin-bottom: 1.4rem;
@@ -43,4 +48,8 @@
     padding: 0.2rem 1rem;
     border-radius: 1rem;
   }
+}
+
+#first-modal form button {
+  align-self: flex-end;
 }
