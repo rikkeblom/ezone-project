@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
     <title>Ezone Sign-up Form</title>
   </head>
   <body>
@@ -27,7 +28,243 @@
                 <div>quiz</div>
               </div>
               <section class="filter-container hidden"></section>
-              <section class="quiz-container"></section>
+              <section class="quiz-container">
+                <div class="question1 hidde">
+                  <p>1/8</p>
+                  <span class="iconify" data-icon="ph:game-controller"></span>
+                  <p>
+                    Let’s start easy.<br />
+                    What kind of games do you play?
+                  </p>
+                  <ul>
+                    <li>
+                      <span class="iconify" data-icon="icomoon-free:target"></span>
+                      <div>
+                        <p>FPS</p>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="iconify" data-icon="mdi:sword-cross"></span>
+                      <div>
+                        <p>MMORPG</p>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="iconify" data-icon="emojione-monotone:sports-medal"></span>
+                      <div>
+                        <p>Sports</p>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="iconify" data-icon="whh:raceflag"></span>
+                      <div>
+                        <p>Racing</p>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="iconify" data-icon="iconoir:tower"></span>
+                      <div>
+                        <p>Tower defense</p>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="iconify" data-icon="mdi:strategy"></span>
+                      <div>
+                        <p>RTS</p>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="iconify" data-icon="carbon:user-simulation"></span>
+                      <div>
+                        <p>Simulation</p>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="iconify" data-icon="fa-solid:hat-wizard"></span>
+                      <div>
+                        <p>Role-playing</p>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="iconify" data-icon="gis:compass-rose"></span>
+                      <div>
+                        <p>Adventure</p>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="iconify" data-icon="clarity:first-aid-kit-line"></span>
+                      <div>
+                        <p>Survival</p>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="iconify" data-icon="tabler:karate"></span>
+                      <div>
+                        <p>Fighting</p>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="iconify" data-icon="ls:crown"></span>
+                      <div>
+                        <p>Battle royale</p>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="iconify" data-icon="gg:music"></span>
+                      <div>
+                        <p>Rhythm</p>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="iconify" data-icon="bi:ladder"></span>
+                      <div>
+                        <p>Platform</p>
+                      </div>
+                    </li>
+                  </ul>
+                  <button>Next</button>
+                </div>
+                <div class="question2 hidden">
+                  <p>2/8</p>
+                  <span class="iconify" data-icon="carbon:choices"></span>
+                  <p>
+                    Which is more important,<br />
+                    having the right equipment or the right attitude?
+                  </p>
+                  <div class="radio-flex-2">
+                    <input name="question2" id="equipment" type="radio" />
+                    <label for="equipment">
+                      <span class="iconify" data-icon="grommet-icons:technology"></span>
+                      <div>
+                        <p>equipment</p>
+                      </div>
+                    </label>
+                    <input name="question2" id="attitude" type="radio" />
+                    <label for="attitude">
+                      <span class="iconify" data-icon="ph:brain-fill"></span>
+                      <div>
+                        <p>attitude</p>
+                      </div>
+                    </label>
+                  </div>
+                  <button>Previous</button>
+                  <button>Next</button>
+                </div>
+                <div class="question3 hidden">
+                  <p>3/8</p>
+                  <span class="iconify" data-icon="simple-line-icons:energy"></span>
+                  <p>Do you often feel drained, tense, or unable to relax after gaming?</p>
+                  <div class="radio-flex-2">
+                    <input name="question3" id="yes3" type="radio" />
+                    <label for="yes3">
+                      <span class="iconify" data-icon="dashicons:yes-alt"></span>
+                      <div>
+                        <p>Yes</p>
+                      </div>
+                    </label>
+                    <input name="question3" id="no3" type="radio" />
+                    <label for="no3">
+                      <span class="iconify" data-icon="healthicons:no"></span>
+                      <div>
+                        <p>No</p>
+                      </div>
+                    </label>
+                  </div>
+                  <button>Previous</button>
+                  <button>Next</button>
+                </div>
+                <div class="question4 hidden">
+                  <p>4/8</p>
+                  <span class="iconify" data-icon="icon-park:sleep-one"></span>
+                  <p>How long do you sleep on an average night?</p>
+                  <div>
+                    <span>1</span><input type="range" min="1" max="12" /><span>12</span>
+                    <p>?</p>
+                  </div>
+                  <button>Previous</button>
+                  <button>Next</button>
+                </div>
+                <div class="question5 hidden">
+                  <p>5/8</p>
+                  <span class="iconify" data-icon="icomoon-free:eye"></span>
+                  <p>Do your eyes often feel tired after gaming?</p>
+                  <div class="radio-flex-2">
+                    <input name="question5" id="yes5" type="radio" />
+                    <label for="yes5">
+                      <span class="iconify" data-icon="dashicons:yes-alt"></span>
+                      <div>
+                        <p>Yes</p>
+                      </div>
+                    </label>
+                    <input name="question5" id="no5" type="radio" />
+                    <label for="no5">
+                      <span class="iconify" data-icon="healthicons:no"></span>
+                      <div>
+                        <p>No</p>
+                      </div>
+                    </label>
+                  </div>
+                  <button>Previous</button>
+                  <button>Next</button>
+                </div>
+                <div class="question6 hidden">
+                  <p>6/8</p>
+                  <span class="iconify" data-icon="ion:ear-outline"></span>
+                  <p>Do you struggle to hear clearly after gaming or have a constant ringing in your ears?</p>
+                  <div class="radio-flex-2">
+                    <input name="question6" id="yes6" type="radio" />
+                    <label for="yes6">
+                      <span class="iconify" data-icon="dashicons:yes-alt"></span>
+                      <div>
+                        <p>Yes</p>
+                      </div>
+                    </label>
+                    <input name="question6" id="no6" type="radio" />
+                    <label for="no6">
+                      <span class="iconify" data-icon="healthicons:no"></span>
+                      <div>
+                        <p>No</p>
+                      </div>
+                    </label>
+                  </div>
+                  <button>Previous</button>
+                  <button>Next</button>
+                </div>
+                <div class="question7 hidden">
+                  <p>7/8</p>
+                  <span class="iconify" data-icon="healthicons:exercise-weights"></span>
+                  <p>On average, how many hours do you spend on physical exercise each week?</p>
+                  <div>
+                    <span>0h</span><input type="range" min="0" max="30" /><span>30h</span>
+                    <p>?</p>
+                  </div>
+                  <button>Previous</button>
+                  <button>Next</button>
+                </div>
+                <div class="question8 hidden">
+                  <p>8/8</p>
+                  <span class="iconify" data-icon="akar-icons:health"></span>
+                  <p>Have you experienced any physical pain related to gaming within the last 2 weeks?</p>
+                  <div class="radio-flex-2">
+                    <input name="question8" id="yes8" type="radio" />
+                    <label for="yes8">
+                      <span class="iconify" data-icon="dashicons:yes-alt"></span>
+                      <div>
+                        <p>Yes</p>
+                      </div>
+                    </label>
+                    <input name="question8" id="no8" type="radio" />
+                    <label for="no8">
+                      <span class="iconify" data-icon="healthicons:no"></span>
+                      <div>
+                        <p>No</p>
+                      </div>
+                    </label>
+                  </div>
+                  <button>Previous</button>
+                  <button>Get Result</button>
+                </div>
+              </section>
             </div>
           </div>
           <div class="modal-page-container">
