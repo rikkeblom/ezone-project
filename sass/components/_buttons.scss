@@ -1,6 +1,10 @@
 @use "../base/colors";
 
 .button-main {
+  cursor: pointer;
+  width: 195px;
+  height: 55px;
+  align-self: center;
   display: block;
   border-radius: 140px;
   border: 0px;
@@ -17,27 +21,38 @@
 .button-main:hover {
   background: colors.$orange-color;
   color: colors.$background-color;
+  box-shadow: -2px 3px 4px 0px colors.$orange-color;
+  -webkit-box-shadow: -2px 3px 4px 0px colors.$orange-color;
+  -moz-box-shadow: -2px 3px 4px 0px colors.$orange-color;
 }
 
-.close {
-  top: 32px;
+.button-close {
+  cursor: pointer;
   width: 32px;
   height: 32px;
-}
-
-.close:before,
-.close:after {
-  position: absolute;
-  content: " ";
-  height: 32px;
-  width: 4px;
   background-color: colors.$orange-color;
+  border-radius: 50%;
+  color: black;
+  text-align: center;
+  font-size: 22px;
+  align-self: self-end;
+  position: absolute;
+  margin-top: -15px;
 }
 
-.close:before {
-  transform: rotate(45deg);
-}
+// .close:before,
+// .close:after {
+//   // position: absolute;
+//   content: " ";
+//   height: 26px;
+//   width: 4px;
+//   background-color: black;
+// }
 
-.close:after {
-  transform: rotate(-45deg);
-}
+// .close:before {
+//   transform: rotate(45deg);
+// }
+
+// .close:after {
+//   transform: rotate(-45deg);
+// }
