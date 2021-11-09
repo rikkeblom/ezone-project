@@ -2,54 +2,56 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
 
-#first-modal form {
-  display: flex;
-  flex-direction: column;
-}
+  form {
+    display: flex;
+    flex-direction: column;
 
-.input-container {
-  position: relative;
-  margin-bottom: 1.4rem;
+    .input-container {
+      position: relative;
+      margin-bottom: 1.4rem;
 
-  input {
-    height: 1.5rem;
-    border-radius: 5px;
+      input {
+        height: 1.5rem;
+        border-radius: 5px;
+      }
+
+      label.placeholder {
+        color: #808097;
+        top: 0.5rem;
+        left: 0.5rem;
+        pointer-events: none;
+        position: absolute;
+        transform-origin: 0 50%;
+        transition: transform 200ms, color 200ms;
+      }
+
+      input:focus ~ .cut,
+      input:not(:placeholder-shown) ~ .cut {
+        transform: translateY(0.2rem);
+      }
+
+      input:focus ~ label.placeholder,
+      input:not(:placeholder-shown) ~ label.placeholder {
+        transform: translateY(-1.7rem) translateX(0.2rem) scale(0.9);
+      }
+
+      input:not(:placeholder-shown) ~ label.placeholder {
+        background-color: blue;
+        padding: 0.2rem 1rem;
+        border-radius: 1rem;
+      }
+
+      input:focus ~ label.placeholder {
+        color: #dc2f55;
+        background-color: blue;
+        padding: 0.2rem 1rem;
+        border-radius: 1rem;
+      }
+    }
+
+    button {
+      align-self: flex-end;
+    }
   }
-
-  label.placeholder {
-    color: #808097;
-    top: 0.5rem;
-    left: 0.5rem;
-    pointer-events: none;
-    position: absolute;
-    transform-origin: 0 50%;
-    transition: transform 200ms, color 200ms;
-  }
-  input:focus ~ .cut,
-  input:not(:placeholder-shown) ~ .cut {
-    transform: translateY(0.2rem);
-  }
-  input:focus ~ label.placeholder,
-  input:not(:placeholder-shown) ~ label.placeholder {
-    transform: translateY(-1.7rem) translateX(0.2rem) scale(0.9);
-  }
-
-  input:not(:placeholder-shown) ~ label.placeholder {
-    background-color: blue;
-    padding: 0.2rem 1rem;
-    border-radius: 1rem;
-  }
-
-  input:focus ~ label.placeholder {
-    color: #dc2f55;
-    background-color: blue;
-    padding: 0.2rem 1rem;
-    border-radius: 1rem;
-  }
-}
-
-#first-modal form button {
-  align-self: flex-end;
 }
