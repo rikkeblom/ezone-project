@@ -1,10 +1,12 @@
 .question1 {
   ul {
-    overflow-y: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
     display: flex;
     flex-direction: row;
     list-style-type: none;
     gap: 1rem;
+    padding-left: 0;
   }
   li {
     background-color: red;
@@ -14,12 +16,23 @@
     align-items: center;
     justify-content: center;
   }
+  label {
+    text-align: center;
+    cursor: pointer;
+  }
   div {
     width: 6rem;
   }
-  p {
-    text-align: center;
+  input[type="checkbox"] {
+    display: none;
   }
+  input[type="checkbox"]:checked + label {
+    background-color: #bbb;
+  }
+}
+
+p {
+  text-align: center;
 }
 
 .radio-flex-2 {
