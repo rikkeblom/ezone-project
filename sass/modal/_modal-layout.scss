@@ -35,7 +35,7 @@ main {
 }
 
 .modal-page-container:not(.active) > * {
-  display: none;
+  display: none !important;
 }
 
 fieldset {
