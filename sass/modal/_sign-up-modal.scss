@@ -1,9 +1,12 @@
+@use "../base/colors";
+
 #first-modal {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   form {
+    padding: 30px 0px;
     display: flex;
     flex-direction: column;
 
@@ -14,11 +17,14 @@
       input {
         height: 1.5rem;
         border-radius: 5px;
+        letter-spacing: 0.5px;
+        padding-left: 5px;
+        width: 230px;
       }
 
       label.placeholder {
         color: #808097;
-        top: 0.5rem;
+        top: 0.3rem;
         left: 0.5rem;
         pointer-events: none;
         position: absolute;
@@ -37,21 +43,43 @@
       }
 
       input:not(:placeholder-shown) ~ label.placeholder {
-        background-color: blue;
-        padding: 0.2rem 1rem;
-        border-radius: 1rem;
+        background-color: colors.$dark-blue-color;
+        color: colors.$gray-color;
+        padding: 1px 5px;
+        border-radius: 5px;
+        margin-top: 5px;
+        margin-left: -2px;
       }
 
       input:focus ~ label.placeholder {
-        color: #dc2f55;
-        background-color: blue;
-        padding: 0.2rem 1rem;
-        border-radius: 1rem;
+        background-color: colors.$dark-blue-color;
+        color: colors.$gray-color;
+        padding: 1px 5px;
+        border-radius: 5px;
+        margin-top: 5px;
+        margin-left: -2px;
       }
     }
 
-    button {
-      align-self: flex-end;
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      &:invalid:not(:placeholder-shown) {
+        & ~ .requirements {
+          visibility: visible;
+        }
+      }
     }
+
+    .requirements {
+      visibility: hidden;
+      color: colors.$red-color;
+      font-size: 0.7rem;
+      text-align: right;
+    }
+
+    // button {
+    //   align-self: flex-end;
+    // }
   }
 }

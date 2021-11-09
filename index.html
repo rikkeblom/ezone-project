@@ -7,37 +7,70 @@
     <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
     <title>Ezone Sign-up Form</title>
   </head>
+
   <body>
     <main>
       <h1>EZONE STUFF</h1>
-      <button class="button-main">Sign Up Now</button>
-      <a href="#" class="close"></a>
       <section>
         <div class="modal-container">
           <div class="modal-page-container active">
+            <a href="#" class="button-close">✖</a>
             <div class="modal-page" id="first-modal">
-              <h2>Sign up</h2>
-              <p>Join our community of esport athletes and get access to the latest research tailored to your esport needs.</p>
+              <h2>SIGN UP</h2>
+              <p>
+                Join our community of esport athletes and get access to the
+                latest research tailored to your esport needs.
+              </p>
               <form>
                 <div class="input-container">
-                  <input id="username" type="text" placeholder=" " />
+                  <input
+                    autocomplete="off"
+                    type="text"
+                    placeholder=" "
+                    pattern="[A-Za-z0-9]{6,50}"
+                    required
+                  />
                   <label for="username" class="placeholder">Username</label>
+                  <div class="requirements">Minimum 6 characters long.</div>
                 </div>
+
                 <div class="input-container">
-                  <input id="email" type="email" placeholder=" " />
+                  <input id="email" type="email" placeholder=" " required />
                   <label for="email" class="placeholder">Email</label>
+                  <div class="requirements">Must be a valid email address.</div>
                 </div>
+
                 <div class="input-container">
-                  <input id="password" type="password" placeholder=" " />
+                  <input
+                    id="password"
+                    type="password"
+                    placeholder=" "
+                    pattern="[A-Za-z0-9]{6,50}"
+                    required
+                  />
                   <label for="password" class="placeholder">Password</label>
+                  <div class="requirements">
+                    Must be alphanumeric and min 6 characters.
+                  </div>
                 </div>
+
                 <div class="input-container">
-                  <input id="repeat-password" type="password" placeholder=" " />
-                  <label for="repeat-password" class="placeholder">Repeat password</label>
+                  <input
+                    id="repeat-password"
+                    type="password"
+                    placeholder=" "
+                    required
+                  />
+                  <label for="repeat-password" class="placeholder"
+                    >Repeat password</label
+                  >
+                  <div class="requirements">Password did not match.</div>
                 </div>
-                <button type="submit">Continue</button>
+
+                <button type="submit" class="button-main">Continue</button>
               </form>
             </div>
+            <div class="steps-container">1</div>
           </div>
           <div class="modal-page-container">
             <div class="modal-page">
@@ -60,7 +93,10 @@
                     <li>
                       <input type="checkbox" name="FPS" id="FPS" />
                       <label for="FPS">
-                        <span class="iconify" data-icon="icomoon-free:target"></span>
+                        <span
+                          class="iconify"
+                          data-icon="icomoon-free:target"
+                        ></span>
                         <div>
                           <p>FPS</p>
                         </div>
@@ -69,7 +105,10 @@
                     <li>
                       <input type="checkbox" name="MMORPG" id="MMORPG" />
                       <label for="MMORPG">
-                        <span class="iconify" data-icon="mdi:sword-cross"></span>
+                        <span
+                          class="iconify"
+                          data-icon="mdi:sword-cross"
+                        ></span>
                         <div>
                           <p>MMORPG</p>
                         </div>
@@ -78,7 +117,10 @@
                     <li>
                       <input type="checkbox" name="sports" id="sports" />
                       <label for="sports">
-                        <span class="iconify" data-icon="emojione-monotone:sports-medal"></span>
+                        <span
+                          class="iconify"
+                          data-icon="emojione-monotone:sports-medal"
+                        ></span>
                         <div>
                           <p>Sports</p>
                         </div>
@@ -94,7 +136,11 @@
                       </label>
                     </li>
                     <li>
-                      <input type="checkbox" name="towerdefence" id="towerdefence" />
+                      <input
+                        type="checkbox"
+                        name="towerdefence"
+                        id="towerdefence"
+                      />
                       <label for="towerdefence">
                         <span class="iconify" data-icon="iconoir:tower"></span>
                         <div>
@@ -112,18 +158,32 @@
                       </label>
                     </li>
                     <li>
-                      <input type="checkbox" name="simulation" id="simulation" />
+                      <input
+                        type="checkbox"
+                        name="simulation"
+                        id="simulation"
+                      />
                       <label for="simulation">
-                        <span class="iconify" data-icon="carbon:user-simulation"></span>
+                        <span
+                          class="iconify"
+                          data-icon="carbon:user-simulation"
+                        ></span>
                         <div>
                           <p>Simulation</p>
                         </div>
                       </label>
                     </li>
                     <li>
-                      <input type="checkbox" name="roleplaying" id="roleplaying" />
+                      <input
+                        type="checkbox"
+                        name="roleplaying"
+                        id="roleplaying"
+                      />
                       <label for="roleplaying">
-                        <span class="iconify" data-icon="fa-solid:hat-wizard"></span>
+                        <span
+                          class="iconify"
+                          data-icon="fa-solid:hat-wizard"
+                        ></span>
                         <div>
                           <p>Role-playing</p>
                         </div>
@@ -132,7 +192,10 @@
                     <li>
                       <input type="checkbox" name="adventure" id="adventure" />
                       <label for="adventure">
-                        <span class="iconify" data-icon="gis:compass-rose"></span>
+                        <span
+                          class="iconify"
+                          data-icon="gis:compass-rose"
+                        ></span>
                         <div>
                           <p>Adventure</p>
                         </div>
@@ -141,7 +204,10 @@
                     <li>
                       <input type="checkbox" name="survival" id="survival" />
                       <label for="survival">
-                        <span class="iconify" data-icon="clarity:first-aid-kit-line"></span>
+                        <span
+                          class="iconify"
+                          data-icon="clarity:first-aid-kit-line"
+                        ></span>
                         <div>
                           <p>Survival</p>
                         </div>
@@ -157,7 +223,11 @@
                       </label>
                     </li>
                     <li>
-                      <input type="checkbox" name="battleroyale" id="battleroyale" />
+                      <input
+                        type="checkbox"
+                        name="battleroyale"
+                        id="battleroyale"
+                      />
                       <label for="battleroyale">
                         <span class="iconify" data-icon="ls:crown"></span>
                         <div>
@@ -196,7 +266,10 @@
                   <div class="radio-flex-2">
                     <input name="question2" id="equipment" type="radio" />
                     <label for="equipment">
-                      <span class="iconify" data-icon="grommet-icons:technology"></span>
+                      <span
+                        class="iconify"
+                        data-icon="grommet-icons:technology"
+                      ></span>
                       <div>
                         <p>equipment</p>
                       </div>
@@ -214,12 +287,21 @@
                 </div>
                 <div class="question3 hidden">
                   <p>3/8</p>
-                  <span class="iconify" data-icon="simple-line-icons:energy"></span>
-                  <p>Do you often feel drained, tense, or unable to relax after gaming?</p>
+                  <span
+                    class="iconify"
+                    data-icon="simple-line-icons:energy"
+                  ></span>
+                  <p>
+                    Do you often feel drained, tense, or unable to relax after
+                    gaming?
+                  </p>
                   <div class="radio-flex-2">
                     <input name="question3" id="yes3" type="radio" />
                     <label for="yes3">
-                      <span class="iconify" data-icon="dashicons:yes-alt"></span>
+                      <span
+                        class="iconify"
+                        data-icon="dashicons:yes-alt"
+                      ></span>
                       <div>
                         <p>Yes</p>
                       </div>
@@ -240,7 +322,9 @@
                   <span class="iconify" data-icon="icon-park:sleep-one"></span>
                   <p>How long do you sleep on an average night?</p>
                   <div>
-                    <span>1</span><input type="range" min="1" max="12" /><span>12</span>
+                    <span>1</span><input type="range" min="1" max="12" /><span
+                      >12</span
+                    >
                     <p>?</p>
                   </div>
                   <button>Previous</button>
@@ -253,7 +337,10 @@
                   <div class="radio-flex-2">
                     <input name="question5" id="yes5" type="radio" />
                     <label for="yes5">
-                      <span class="iconify" data-icon="dashicons:yes-alt"></span>
+                      <span
+                        class="iconify"
+                        data-icon="dashicons:yes-alt"
+                      ></span>
                       <div>
                         <p>Yes</p>
                       </div>
@@ -272,11 +359,17 @@
                 <div class="question6 hidden">
                   <p>6/8</p>
                   <span class="iconify" data-icon="ion:ear-outline"></span>
-                  <p>Do you struggle to hear clearly after gaming or have a constant ringing in your ears?</p>
+                  <p>
+                    Do you struggle to hear clearly after gaming or have a
+                    constant ringing in your ears?
+                  </p>
                   <div class="radio-flex-2">
                     <input name="question6" id="yes6" type="radio" />
                     <label for="yes6">
-                      <span class="iconify" data-icon="dashicons:yes-alt"></span>
+                      <span
+                        class="iconify"
+                        data-icon="dashicons:yes-alt"
+                      ></span>
                       <div>
                         <p>Yes</p>
                       </div>
@@ -294,10 +387,18 @@
                 </div>
                 <div class="question7 hidden">
                   <p>7/8</p>
-                  <span class="iconify" data-icon="healthicons:exercise-weights"></span>
-                  <p>On average, how many hours do you spend on physical exercise each week?</p>
+                  <span
+                    class="iconify"
+                    data-icon="healthicons:exercise-weights"
+                  ></span>
+                  <p>
+                    On average, how many hours do you spend on physical exercise
+                    each week?
+                  </p>
                   <div>
-                    <span>0h</span><input type="range" min="0" max="30" /><span>30h</span>
+                    <span>0h</span><input type="range" min="0" max="30" /><span
+                      >30h</span
+                    >
                     <p>?</p>
                   </div>
                   <button>Previous</button>
@@ -306,11 +407,17 @@
                 <div class="question8 hidden">
                   <p>8/8</p>
                   <span class="iconify" data-icon="akar-icons:health"></span>
-                  <p>Have you experienced any physical pain related to gaming within the last 2 weeks?</p>
+                  <p>
+                    Have you experienced any physical pain related to gaming
+                    within the last 2 weeks?
+                  </p>
                   <div class="radio-flex-2">
                     <input name="question8" id="yes8" type="radio" />
                     <label for="yes8">
-                      <span class="iconify" data-icon="dashicons:yes-alt"></span>
+                      <span
+                        class="iconify"
+                        data-icon="dashicons:yes-alt"
+                      ></span>
                       <div>
                         <p>Yes</p>
                       </div>
@@ -331,16 +438,26 @@
           </div>
           <div class="modal-page-container">
             <div class="modal-page" id="third-modal">
-              <img class="check-icon" src="assets/svg/check-icon.svg" alt="check icon" />
+              <img
+                class="check-icon"
+                src="assets/svg/check-icon.svg"
+                alt="check icon"
+              />
               <h2>Finish</h2>
-              <p>Thank you for signing up! Your feed is now updated with articles about following topics*:</p>
+              <p>
+                Thank you for signing up! Your feed is now updated with articles
+                about following topics*:
+              </p>
               <div class="topics">
                 <div class="topic">Vision</div>
                 <div class="topic">Hearing</div>
                 <div class="topic">Nutrition</div>
               </div>
               <button>Start</button>
-              <p>*You can always change your preferences in your <a href="">account settings</a>.</p>
+              <p>
+                *You can always change your preferences in your
+                <a href="">account settings</a>.
+              </p>
             </div>
           </div>
         </div>
