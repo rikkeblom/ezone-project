@@ -9,11 +9,12 @@
   </head>
 
   <body>
+    <button class="button-cta">Learn More</button>
+
     <main>
-      <h1>EZONE STUFF</h1>
       <section>
         <div class="modal-container">
-          <div class="modal-page-container active">
+          <div class="modal-page-container">
             <a href="#" class="button-close">✖</a>
             <div class="modal-page" id="first-modal">
               <h2>SIGN UP</h2>
@@ -436,14 +437,11 @@
               </section>
             </div>
           </div>
-          <div class="modal-page-container">
+          <div class="modal-page-container active">
+            <a href="#" class="button-close">✖</a>
             <div class="modal-page" id="third-modal">
-              <img
-                class="check-icon"
-                src="assets/svg/check-icon.svg"
-                alt="check icon"
-              />
-              <h2>Finish</h2>
+              <img class="check-icon" src="assets/check.png" alt="check icon" />
+              <h2>You're Done!</h2>
               <p>
                 Thank you for signing up! Your feed is now updated with articles
                 about following topics*:
@@ -453,12 +451,13 @@
                 <div class="topic">Hearing</div>
                 <div class="topic">Nutrition</div>
               </div>
-              <button>Start</button>
+              <button type="submit" class="button-main">Done</button>
               <p>
                 *You can always change your preferences in your
                 <a href="">account settings</a>.
               </p>
             </div>
+            <div class="steps-container">3</div>
           </div>
         </div>
       </section>
