@@ -1,0 +1,58 @@
+@use "../base/colors";
+
+.button-main {
+  cursor: pointer;
+  width: 195px;
+  height: 55px;
+  align-self: center;
+  display: block;
+  border-radius: 140px;
+  border: 0px;
+  background-color: colors.$green-color;
+  padding: 1rem 2rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+  box-shadow: -2px 3px 4px 0px rgb(185 248 185 / 75%);
+  -webkit-box-shadow: -2px 3px 4px 0px rgb(185 248 185 / 75%);
+  -moz-box-shadow: -2px 3px 4px 0px rgb(185 248 185 / 75%);
+}
+
+.button-main:hover {
+  background: colors.$orange-color;
+  color: colors.$background-color;
+  box-shadow: -2px 3px 4px 0px colors.$orange-color;
+  -webkit-box-shadow: -2px 3px 4px 0px colors.$orange-color;
+  -moz-box-shadow: -2px 3px 4px 0px colors.$orange-color;
+}
+
+.button-close {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  background-color: colors.$orange-color;
+  border-radius: 50%;
+  color: black;
+  text-align: center;
+  font-size: 22px;
+  align-self: self-end;
+  position: absolute;
+  margin-top: -15px;
+}
+
+// .close:before,
+// .close:after {
+//   // position: absolute;
+//   content: " ";
+//   height: 26px;
+//   width: 4px;
+//   background-color: black;
+// }
+
+// .close:before {
+//   transform: rotate(45deg);
+// }
+
+// .close:after {
+//   transform: rotate(-45deg);
+// }

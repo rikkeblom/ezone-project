@@ -1,17 +1,33 @@
+@use "../base/colors";
+
+main {
+  background-color: black;
+  padding: 100px;
+}
+
 .modal-container {
-  background-color: hotpink;
+  font-family: "Shapiro regular";
+  padding-top: 100px;
   height: 500px;
   width: 500px;
   display: flex;
   flex-direction: row;
   gap: 1rem;
   justify-content: space-between;
+  color: colors.$font-color;
 }
 
 .modal-page-container {
+  display: flex;
+  flex-direction: column;
   height: inherit;
   width: 4rem;
-  background-color: yellow;
+  border-radius: 10px;
+  background-color: colors.$background-color;
+  -webkit-box-shadow: 0px 0px 4px 4px colors.$blue-color;
+  -moz-box-shadow: 0px 0px 4px 4px colors.$blue-color;
+  box-shadow: 0px 0px 4px 2px colors.$blue-color,
+    colors.$blue-color 0px 0px 4px 0px inset;
 }
 
 .modal-page-container.active {
@@ -20,4 +36,10 @@
 
 .modal-page-container:not(.active) > * {
   display: none;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: 0px;
 }
