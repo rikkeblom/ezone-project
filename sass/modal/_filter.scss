@@ -1,0 +1,18 @@
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  input[type="checkbox"] + label {
+    cursor: pointer;
+    background-color: gray;
+  }
+
+  input[type="checkbox"]:checked + label {
+    background: #0080ff;
+  }
+}
