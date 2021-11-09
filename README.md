@@ -1,5 +1,6 @@
 # EZONE SIGNUP FORM 
 disclaimer: this is a school project and does not represent Ezone or their parent company AceZone. 
+<br>
 The assignment was set in collaboration between digital agency Signifly and Copenhagen School of Design and Technology. 
 
 ## hosting of the main branch:
