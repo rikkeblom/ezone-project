@@ -1,0 +1,18 @@
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  cursor: pointer;
+  width: 5rem;
+  height: 5rem;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="checkbox"]:checked + label {
+  background: #0080ff;
+}
