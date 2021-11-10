@@ -1,6 +1,6 @@
 export async function readCheckboxes() {
   // console.log("function readCheckboxes");
-  const selectedGames = document.querySelectorAll("input[type='checkbox']:checked");
+  const selectedGames = document.querySelectorAll(".question1 input[type='checkbox']:checked");
   let filterString = localStorage.getItem("filters");
   let filterObject = JSON.parse(filterString);
 
