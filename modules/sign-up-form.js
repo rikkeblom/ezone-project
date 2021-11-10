@@ -5,10 +5,13 @@ export function validatePassword(e) {
   console.log(form.elements);
   const firstPassword = form.elements.password.value;
   const secondPassword = form.elements.repeatPassword.value;
+  const repeatPasswordValidationMessage = document.querySelector("#password-container .requirements");
   if (firstPassword === secondPassword) {
     saveUserInfoInLocalStorage(form);
+    repeatPasswordValidationMessage.style.visibility = "hidden";
   } else {
     console.log("passwords don't match");
+    repeatPasswordValidationMessage.style.visibility = "visible";
   }
 }
 
