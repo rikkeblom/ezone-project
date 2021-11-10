@@ -7,20 +7,20 @@ document.querySelector("#first-modal button[type=submit]").addEventListener("cli
 
 // FILTER
 import { hideAndUnhideFilterAndQuiz } from "./modules/filter-quiz-toggle";
-import { setupLocalStorageItem, readFilterButtons } from "./modules/filter";
+import { readFilterButtons, setupLocalStorageItemFilter } from "./modules/filter";
 // import { setupLocalStorageItem } from "./modules/quiz";
 
 hideAndUnhideFilterAndQuiz();
-setupLocalStorageItem();
+setupLocalStorageItemFilter();
 getUserFilterSelection();
 
 function getUserFilterSelection() {
   document.querySelector("form.filter button[type=submit]").addEventListener("click", readFilterButtons);
 }
 
-import { readCheckboxes, setupLocalStorageItem, nextQuestion, previousQuestion } from "./modules/quiz.js";
+import { readCheckboxes, nextQuestion, previousQuestion } from "./modules/quiz.js";
 
-setupLocalStorageItem();
+// setupLocalStorageItem();
 document.querySelector(".question1 button:last-of-type").addEventListener("click", readCheckboxes);
 
 document.querySelector(".question1 button:last-of-type").addEventListener("click", nextQuestion);

@@ -176,29 +176,29 @@ export function readRange() {
   localStorage.setItem("filters", filterLocalStorage);
 }
 
-export function setupLocalStorageItem() {
-  let filters = {
-    handEyeCoordination: false,
-    reactionTime: false,
-    hearing: false,
-    vision: false,
-    communication: false,
-    multitasking: false,
-    mindset: false,
-    nutrition: false,
-    injuries: false,
-    technology: false,
-    physiology: false,
-    sleep: false,
-    stress: false,
-    tactical: false,
-    strategy: false,
-    leadership: false,
-  };
+// export function setupLocalStorageItem() {
+//   let filters = {
+//     handEyeCoordination: false,
+//     reactionTime: false,
+//     hearing: false,
+//     vision: false,
+//     communication: false,
+//     multitasking: false,
+//     mindset: false,
+//     nutrition: false,
+//     injuries: false,
+//     technology: false,
+//     physiology: false,
+//     sleep: false,
+//     stress: false,
+//     tactical: false,
+//     strategy: false,
+//     leadership: false,
+//   };
 
-  let filterString = JSON.stringify(filters);
-  localStorage.setItem("filters", filterString);
-}
+//   let filterString = JSON.stringify(filters);
+//   localStorage.setItem("filters", filterString);
+// }
 
 export function nextQuestion() {
   // console.log("next question please");

@@ -1,4 +1,4 @@
-export function setupLocalStorageItem() {
+export function setupLocalStorageItemFilter() {
   let filters = {
     handEyeCoordination: false,
     reactionTime: false,
