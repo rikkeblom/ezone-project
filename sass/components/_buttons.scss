@@ -64,3 +64,35 @@
   margin-right: -10px;
   place-self: flex-end;
 }
+
+.button-question {
+  width: 90px;
+  height: 30px;
+  margin-top: 10px;
+
+  &#button-question-prev {
+    color: colors.$gray-color;
+    text-decoration: underline;
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
+    margin-right: 30px;
+
+    &:hover {
+      color: colors.$red-color;
+    }
+  }
+
+  &#button-question-next {
+    color: colors.$orange-color;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid colors.$orange-color;
+    border-radius: 50px;
+
+    &:hover {
+      background-color: colors.$orange-color;
+      color: black;
+    }
+  }
+}

@@ -1,3 +1,5 @@
+@use "../base/colors";
+
 .question1 {
   ul {
     overflow-x: scroll;
@@ -7,14 +9,17 @@
     list-style-type: none;
     gap: 1rem;
     padding-left: 0;
+    width: 350px;
   }
   li {
-    background-color: red;
-    height: 6rem;
+    height: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: 1px solid colors.$orange-color;
+    border-radius: 5px;
+    margin-bottom: 10px;
   }
   label {
     text-align: center;
@@ -33,6 +38,10 @@
 
 .quiz-container p {
   text-align: center;
+
+  // &:nth-child(3) {
+  //   padding-bottom: 20px;
+  // }
 }
 
 .radio-flex-2 {
@@ -49,22 +58,60 @@
     cursor: pointer;
     width: 5rem;
     height: 5rem;
-    background-color: green;
+    background-color: #322a5a;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+    &:hover {
+      background-color: colors.$orange-color;
+      color: black;
+    }
   }
+
   input[type="radio"]:checked + label {
-    background-color: #bbb;
+    background-color: colors.$green-color;
+    color: black;
   }
 }
 
 .quiz-container .iconify {
   font-size: 2rem;
   margin-top: 1rem;
+
+  &:nth-child(1) {
+    margin-top: 0px;
+  }
+}
+
+.quiz-container > div > svg > path {
+  fill: colors.$green-color;
+}
+
+svg.iconify.iconify--icon-park g {
+  stroke: colors.$green-color;
+}
+
+.question7 svg.iconify.iconify--healthicons path {
+  fill: colors.$green-color;
+}
+
+svg.iconify.iconify--akar-icons path {
+  fill: colors.$green-color;
+  stroke: none;
 }
 
 .hidden {
   display: none;
+}
+
+// media query
+
+@media only screen and (max-width: 600px) {
+  .question1 ul {
+    width: 300px;
+  }
 }
