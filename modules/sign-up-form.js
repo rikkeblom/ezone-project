@@ -38,7 +38,6 @@ function validateInput(input) {
 
 //validate password (same as other)
 function validatePassword(submitButton, form) {
-  console.log(form.elements);
   const firstPassword = form.elements.password.value;
   const secondPassword = form.elements.repeatPassword.value;
   const repeatPasswordValidationMessage = document.querySelector("#password-container .requirements");
