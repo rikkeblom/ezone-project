@@ -10,6 +10,21 @@ body {
   background-size: cover;
 }
 
+.modal-page {
+  animation-name: show;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes show {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
 .modal-container {
   font-family: "Shapiro regular";
   padding-top: 100px;
@@ -24,7 +39,6 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: none;
 }
 
 .modal-page-container {
