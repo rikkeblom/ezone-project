@@ -1,10 +1,19 @@
 //validate password (same as other)
-
-//save form content in localStorage by clicking button
-export function saveUserInfoInLocalStorage(e) {
+export function validatePassword(e) {
   e.preventDefault();
   const form = document.querySelector("#first-modal form");
-  console.log(form.elements.username.value);
+  console.log(form.elements);
+  const firstPassword = form.elements.password.value;
+  const secondPassword = form.elements.repeatPassword.value;
+  if (firstPassword === secondPassword) {
+    saveUserInfoInLocalStorage(form);
+  } else {
+    console.log("passwords don't match");
+  }
+}
+
+//save form content in localStorage by clicking button
+function saveUserInfoInLocalStorage(form) {
   let userObject = {
     username: "",
     email: "",
