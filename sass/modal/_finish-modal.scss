@@ -1,10 +1,36 @@
+@use "../base/colors";
+
 #third-modal {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
 
   .check-icon {
     max-width: 30%;
     height: auto;
+  }
+
+  .topics {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 20px 0 20px 0;
+    font-size: 1.3rem;
+  }
+
+  & > p:nth-child(even) {
+    padding-top: 30px;
+    font-size: 0.7rem;
+    margin: 0px 25px 0px 25px;
+  }
+
+  a {
+    color: colors.$orange-color;
+
+    &:hover {
+      color: colors.$green-color;
+    }
   }
 }
