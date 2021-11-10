@@ -270,3 +270,12 @@ export function previousQuestion() {
     document.querySelector(".question7 button:last-of-type").addEventListener("click", nextQuestion);
   }
 }
+
+export function showRange() {
+  console.log("showRange");
+  if (document.querySelector(".question4").classList.contains("hidden") != true) {
+    document.querySelector(".question4 .live-range").textContent = document.querySelector(".question4 input[type=range]").value;
+  } else if (document.querySelector(".question7").classList.contains("hidden") != true) {
+    document.querySelector(".question7 .live-range").textContent = document.querySelector(".question7 input[type=range]").value;
+  }
+}

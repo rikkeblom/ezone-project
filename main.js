@@ -18,7 +18,7 @@ function getUserFilterSelection() {
   document.querySelector("form.filter button[type=submit]").addEventListener("click", readFilterButtons);
 }
 
-import { readCheckboxes, nextQuestion, previousQuestion } from "./modules/quiz.js";
+import { readCheckboxes, nextQuestion, previousQuestion, showRange } from "./modules/quiz.js";
 
 // setupLocalStorageItem();
 document.querySelector(".question1 button:last-of-type").addEventListener("click", readCheckboxes);
@@ -36,3 +36,6 @@ document.querySelector(".question8 button:first-of-type").addEventListener("clic
 import { readFiltersFromLocalStorage } from "./modules/show-results";
 document.querySelector(".end-quiz").addEventListener("click", readFiltersFromLocalStorage);
 document.querySelector(".end-filter").addEventListener("click", readFiltersFromLocalStorage);
+
+document.querySelector(".question4 input[type=range]").addEventListener("input", showRange);
+document.querySelector(".question7 input[type=range]").addEventListener("input", showRange);
