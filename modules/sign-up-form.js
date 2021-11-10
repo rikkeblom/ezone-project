@@ -1,13 +1,43 @@
 //delegate tasks
 export function submitForm(e) {
   e.preventDefault();
-  validatePassword(e.target);
+  const form = document.querySelector("#first-modal form");
+  const allInputs = document.querySelectorAll("#first-modal input");
+  allInputs.forEach((input) => {
+    const inputValidity = input.checkValidity();
+    const errorMessage = input.parentElement.lastElementChild;
+    if (inputValidity === true) {
+      errorMessage.style.visibility = "hidden";
+    } else {
+      errorMessage.style.visibility = "visible";
+    }
+    input.addEventListener("input", () => {
+      const inputIsValid = validateInput(input);
+      if (inputIsValid === false) {
+        errorMessage.style.visibility = "visible";
+      } else {
+        errorMessage.style.visibility = "hidden";
+      }
+    });
+  });
+  const formIsValid = validateForm(form);
+  if (formIsValid === true) {
+    validatePassword(e.target, form);
+  } else {
+    console.log("form is not valid!");
+  }
+}
+
+function validateForm(form) {
+  return form.checkValidity();
+}
+
+function validateInput(input) {
+  return input.checkValidity();
 }
 
 //validate password (same as other)
-function validatePassword(submitButton) {
-  const form = document.querySelector("#first-modal form");
-  console.log(form.elements);
+function validatePassword(submitButton, form) {
   const firstPassword = form.elements.password.value;
   const secondPassword = form.elements.repeatPassword.value;
   const repeatPasswordValidationMessage = document.querySelector("#password-container .requirements");
