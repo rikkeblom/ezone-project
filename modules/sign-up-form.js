@@ -2,14 +2,29 @@
 export function submitForm(e) {
   e.preventDefault();
   const form = document.querySelector("#first-modal form");
-  const firstInput = document.querySelector("#first-modal input:first-of-type");
+  const allInputs = document.querySelectorAll("#first-modal input");
+  allInputs.forEach((input) => {
+    const inputValidity = input.checkValidity();
+    const errorMessage = input.parentElement.lastElementChild;
+    if (inputValidity === true) {
+      errorMessage.style.visibility = "hidden";
+    } else {
+      errorMessage.style.visibility = "visible";
+    }
+    input.addEventListener("input", () => {
+      const inputIsValid = validateInput(input);
+      if (inputIsValid === false) {
+        errorMessage.style.visibility = "visible";
+      } else {
+        errorMessage.style.visibility = "hidden";
+      }
+    });
+  });
   const formIsValid = validateForm(form);
-  const firstInputIsValid = validateInput(firstInput);
   if (formIsValid === true) {
     validatePassword(e.target, form);
   } else {
     console.log("form is not valid!");
-    checkFirstInputValidity(firstInput);
   }
 }
 
@@ -19,21 +34,6 @@ function validateForm(form) {
 
 function validateInput(input) {
   return input.checkValidity();
-}
-
-function checkFirstInputValidity(input) {
-  const firstErrorMessage = document.querySelector("#first-modal .requirements:first-of-type");
-  firstErrorMessage.style.visibility = "visible";
-  input.addEventListener("input", () => {
-    const inputIsValid = validateInput(input);
-    if (inputIsValid === false) {
-      console.log("input is not valid");
-      firstErrorMessage.style.visibility = "visible";
-    } else {
-      console.log("input is valid");
-      firstErrorMessage.style.visibility = "hidden";
-    }
-  });
 }
 
 //validate password (same as other)
