@@ -1,8 +1,17 @@
 export async function readCheckboxes() {
-  console.log("function readCheckboxes");
+  // console.log("function readCheckboxes");
   const selectedGames = document.querySelectorAll("input[type='checkbox']:checked");
   let filterString = localStorage.getItem("filters");
   let filterObject = JSON.parse(filterString);
+
+  //resetting the affected filters incase someone goes back to this question and answers differently
+  filterObject.handEyeCoordination = false;
+  filterObject.reactionTime = false;
+  filterObject.tactical = false;
+  filterObject.strategy = false;
+  filterObject.leadership = false;
+  filterObject.communication = false;
+  filterObject.multitasking = false;
 
   for (let i = 0; i < selectedGames.length; i++) {
     console.log(selectedGames[i].name);
@@ -67,13 +76,13 @@ export async function readCheckboxes() {
       }
     }
   }
-  console.log(filterObject);
+  // console.log(filterObject);
   let filterLocalStorage = JSON.stringify(filterObject);
   localStorage.setItem("filters", filterLocalStorage);
 }
 
 export function readRadioButtons() {
-  console.log("readradiobuttons");
+  // console.log("readradiobuttons");
   let questionNumber;
   if (document.querySelector(".question2").classList.contains("hidden") != true) {
     questionNumber = "2";
@@ -86,10 +95,10 @@ export function readRadioButtons() {
   } else if (document.querySelector(".question8").classList.contains("hidden") != true) {
     questionNumber = "8";
   }
-  console.log("question " + questionNumber);
+  // console.log("question " + questionNumber);
 
   let choice = document.querySelector(`.question${questionNumber} input[type='radio']:checked`).id;
-  console.log(choice);
+  // console.log(choice);
   let filterString = localStorage.getItem("filters");
   let filterObject = JSON.parse(filterString);
 
@@ -135,6 +144,38 @@ export function readRadioButtons() {
   localStorage.setItem("filters", filterLocalStorage);
 }
 
+export function readRange() {
+  // console.log("function readCheckboxes");
+  let filterString = localStorage.getItem("filters");
+  let filterObject = JSON.parse(filterString);
+  if (document.querySelector(".question4").classList.contains("hidden") != true) {
+    let value = document.querySelector(".question4 input[type='range']").value;
+    if (value < 6) {
+      filterObject.sleep = true;
+      console.log("added sleep");
+    } else if (value > 9) {
+      filterObject.sleep = true;
+      console.log("added sleep");
+    } else {
+      filterObject.sleep = false;
+      console.log("removed sleep");
+    }
+    console.log("you sleep " + value + " hours");
+  } else if (document.querySelector(".question7").classList.contains("hidden") != true) {
+    let value = document.querySelector(".question7 input[type='range']").value;
+    if (value < 3) {
+      filterObject.physiology = true;
+      console.log("added physiology");
+    } else {
+      filterObject.physiology = false;
+      console.log("removed physiology");
+    }
+    console.log("you exercise " + value + " hours per week");
+  }
+  let filterLocalStorage = JSON.stringify(filterObject);
+  localStorage.setItem("filters", filterLocalStorage);
+}
+
 export function setupLocalStorageItem() {
   let filters = {
     handEyeCoordination: false,
@@ -160,7 +201,7 @@ export function setupLocalStorageItem() {
 }
 
 export function nextQuestion() {
-  console.log("next question please");
+  // console.log("next question please");
   if (document.querySelector(".question1").classList.contains("hidden") != true) {
     document.querySelector(".question1").classList.add("hidden");
     document.querySelector(".question2").classList.remove("hidden");
@@ -174,6 +215,7 @@ export function nextQuestion() {
   } else if (document.querySelector(".question3").classList.contains("hidden") != true) {
     document.querySelector(".question3").classList.add("hidden");
     document.querySelector(".question4").classList.remove("hidden");
+    document.querySelector(".question4 button:last-of-type").addEventListener("click", readRange);
     document.querySelector(".question4 button:last-of-type").addEventListener("click", nextQuestion);
   } else if (document.querySelector(".question4").classList.contains("hidden") != true) {
     document.querySelector(".question4").classList.add("hidden");
@@ -188,6 +230,7 @@ export function nextQuestion() {
   } else if (document.querySelector(".question6").classList.contains("hidden") != true) {
     document.querySelector(".question6").classList.add("hidden");
     document.querySelector(".question7").classList.remove("hidden");
+    document.querySelector(".question7 button:last-of-type").addEventListener("click", readRange);
     document.querySelector(".question7 button:last-of-type").addEventListener("click", nextQuestion);
   } else if (document.querySelector(".question7").classList.contains("hidden") != true) {
     document.querySelector(".question7").classList.add("hidden");
@@ -197,7 +240,7 @@ export function nextQuestion() {
 }
 
 export function previousQuestion() {
-  console.log("previous question please");
+  // console.log("previous question please");
   if (document.querySelector(".question2").classList.contains("hidden") != true) {
     document.querySelector(".question2").classList.add("hidden");
     document.querySelector(".question1").classList.remove("hidden");
@@ -221,9 +264,5 @@ export function previousQuestion() {
     document.querySelector(".question7").classList.add("hidden");
     document.querySelector(".question6").classList.remove("hidden");
     document.querySelector(".question6 button:first-of-type").addEventListener("click", nextQuestion);
-  } else if (document.querySelector(".question8").classList.contains("hidden") != true) {
-    document.querySelector(".question8").classList.add("hidden");
-    document.querySelector(".question7").classList.remove("hidden");
-    document.querySelector(".question7 button:first-of-type").addEventListener("click", nextQuestion);
   }
 }
