@@ -10,10 +10,25 @@ body {
   background-size: cover;
 }
 
+.modal-page {
+  animation-name: show;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes show {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
 .modal-container {
   font-family: "Shapiro regular";
   padding-top: 100px;
-  height: 580px;
+  height: 600px;
   width: 530px;
   display: flex;
   flex-direction: row;
@@ -38,6 +53,7 @@ body {
   -moz-box-shadow: 0px 0px 4px 4px colors.$blue-color;
   box-shadow: 0px 0px 4px 2px colors.$blue-color,
     colors.$blue-color 0px 0px 4px 0px inset;
+  transition: 0.3s ease-in;
 
   h2 {
     color: colors.$orange-color;
@@ -112,7 +128,8 @@ fieldset {
     width: 300px;
     top: 50%;
     left: 50%;
-    transform: translate(25%, -5%);
+    transform: translate(30%, -10%);
+    height: calc(100% + 50px);
   }
 
   .modal-page-container:not(.active) {
