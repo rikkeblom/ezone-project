@@ -200,42 +200,56 @@ export function readRange() {
 //   localStorage.setItem("filters", filterString);
 // }
 
+function checkInputs(button) {
+  const relevantInputs = button.closest("div.question").querySelectorAll("input");
+  const inputsArray = Array.from(relevantInputs);
+  const checkedOrIsGreaterThanZero = (input) => input.checked || input.value >= 0;
+  if (inputsArray.some(checkedOrIsGreaterThanZero)) {
+    return true;
+  }
+}
+
 export function nextQuestion() {
-  // console.log("next question please");
-  if (document.querySelector(".question1").classList.contains("hidden") != true) {
-    document.querySelector(".question1").classList.add("hidden");
-    document.querySelector(".question2").classList.remove("hidden");
-    document.querySelector(".question2 button:last-of-type").addEventListener("click", readRadioButtons);
-    document.querySelector(".question2 button:last-of-type").addEventListener("click", nextQuestion);
-  } else if (document.querySelector(".question2").classList.contains("hidden") != true) {
-    document.querySelector(".question2").classList.add("hidden");
-    document.querySelector(".question3").classList.remove("hidden");
-    document.querySelector(".question3 button:last-of-type").addEventListener("click", readRadioButtons);
-    document.querySelector(".question3 button:last-of-type").addEventListener("click", nextQuestion);
-  } else if (document.querySelector(".question3").classList.contains("hidden") != true) {
-    document.querySelector(".question3").classList.add("hidden");
-    document.querySelector(".question4").classList.remove("hidden");
-    document.querySelector(".question4 button:last-of-type").addEventListener("click", readRange);
-    document.querySelector(".question4 button:last-of-type").addEventListener("click", nextQuestion);
-  } else if (document.querySelector(".question4").classList.contains("hidden") != true) {
-    document.querySelector(".question4").classList.add("hidden");
-    document.querySelector(".question5").classList.remove("hidden");
-    document.querySelector(".question5 button:last-of-type").addEventListener("click", readRadioButtons);
-    document.querySelector(".question5 button:last-of-type").addEventListener("click", nextQuestion);
-  } else if (document.querySelector(".question5").classList.contains("hidden") != true) {
-    document.querySelector(".question5").classList.add("hidden");
-    document.querySelector(".question6").classList.remove("hidden");
-    document.querySelector(".question6 button:last-of-type").addEventListener("click", readRadioButtons);
-    document.querySelector(".question6 button:last-of-type").addEventListener("click", nextQuestion);
-  } else if (document.querySelector(".question6").classList.contains("hidden") != true) {
-    document.querySelector(".question6").classList.add("hidden");
-    document.querySelector(".question7").classList.remove("hidden");
-    document.querySelector(".question7 button:last-of-type").addEventListener("click", readRange);
-    document.querySelector(".question7 button:last-of-type").addEventListener("click", nextQuestion);
-  } else if (document.querySelector(".question7").classList.contains("hidden") != true) {
-    document.querySelector(".question7").classList.add("hidden");
-    document.querySelector(".question8").classList.remove("hidden");
-    document.querySelector(".question8 button:last-of-type").addEventListener("click", readRadioButtons);
+  const inputsHaveValue = checkInputs(this);
+  if (inputsHaveValue === true) {
+    console.log("next question please");
+    if (document.querySelector(".question1").classList.contains("hidden") != true) {
+      document.querySelector(".question1").classList.add("hidden");
+      document.querySelector(".question2").classList.remove("hidden");
+      document.querySelector(".question2 button:last-of-type").addEventListener("click", readRadioButtons);
+      document.querySelector(".question2 button:last-of-type").addEventListener("click", nextQuestion);
+    } else if (document.querySelector(".question2").classList.contains("hidden") != true) {
+      document.querySelector(".question2").classList.add("hidden");
+      document.querySelector(".question3").classList.remove("hidden");
+      document.querySelector(".question3 button:last-of-type").addEventListener("click", readRadioButtons);
+      document.querySelector(".question3 button:last-of-type").addEventListener("click", nextQuestion);
+    } else if (document.querySelector(".question3").classList.contains("hidden") != true) {
+      document.querySelector(".question3").classList.add("hidden");
+      document.querySelector(".question4").classList.remove("hidden");
+      document.querySelector(".question4 button:last-of-type").addEventListener("click", readRange);
+      document.querySelector(".question4 button:last-of-type").addEventListener("click", nextQuestion);
+    } else if (document.querySelector(".question4").classList.contains("hidden") != true) {
+      document.querySelector(".question4").classList.add("hidden");
+      document.querySelector(".question5").classList.remove("hidden");
+      document.querySelector(".question5 button:last-of-type").addEventListener("click", readRadioButtons);
+      document.querySelector(".question5 button:last-of-type").addEventListener("click", nextQuestion);
+    } else if (document.querySelector(".question5").classList.contains("hidden") != true) {
+      document.querySelector(".question5").classList.add("hidden");
+      document.querySelector(".question6").classList.remove("hidden");
+      document.querySelector(".question6 button:last-of-type").addEventListener("click", readRadioButtons);
+      document.querySelector(".question6 button:last-of-type").addEventListener("click", nextQuestion);
+    } else if (document.querySelector(".question6").classList.contains("hidden") != true) {
+      document.querySelector(".question6").classList.add("hidden");
+      document.querySelector(".question7").classList.remove("hidden");
+      document.querySelector(".question7 button:last-of-type").addEventListener("click", readRange);
+      document.querySelector(".question7 button:last-of-type").addEventListener("click", nextQuestion);
+    } else if (document.querySelector(".question7").classList.contains("hidden") != true) {
+      document.querySelector(".question7").classList.add("hidden");
+      document.querySelector(".question8").classList.remove("hidden");
+      document.querySelector(".question8 button:last-of-type").addEventListener("click", readRadioButtons);
+    }
+  } else {
+    console.log("choose at least one");
   }
 }
 
