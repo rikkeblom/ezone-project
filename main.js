@@ -32,3 +32,7 @@ document.querySelector(".question5 button:first-of-type").addEventListener("clic
 document.querySelector(".question6 button:first-of-type").addEventListener("click", previousQuestion);
 document.querySelector(".question7 button:first-of-type").addEventListener("click", previousQuestion);
 document.querySelector(".question8 button:first-of-type").addEventListener("click", previousQuestion);
+
+import { readFiltersFromLocalStorage } from "./modules/show-results";
+document.querySelector(".end-quiz").addEventListener("click", readFiltersFromLocalStorage);
+document.querySelector(".end-filter").addEventListener("click", readFiltersFromLocalStorage);
