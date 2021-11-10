@@ -200,11 +200,18 @@ export function readRange() {
 //   localStorage.setItem("filters", filterString);
 // }
 
-export function nextQuestion() {
-  const relevantInputs = this.closest("div.question").querySelectorAll("input");
+function checkInputs(button) {
+  const relevantInputs = button.closest("div.question").querySelectorAll("input");
   const inputsArray = Array.from(relevantInputs);
   const checkedOrIsGreaterThanZero = (input) => input.checked || input.value >= 0;
   if (inputsArray.some(checkedOrIsGreaterThanZero)) {
+    return true;
+  }
+}
+
+export function nextQuestion() {
+  const inputsHaveValue = checkInputs(this);
+  if (inputsHaveValue === true) {
     console.log("next question please");
     if (document.querySelector(".question1").classList.contains("hidden") != true) {
       document.querySelector(".question1").classList.add("hidden");
