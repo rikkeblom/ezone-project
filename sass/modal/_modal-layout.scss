@@ -128,7 +128,8 @@ fieldset {
     width: 300px;
     top: 50%;
     left: 50%;
-    transform: translate(25%, -5%);
+    transform: translate(30%, -10%);
+    height: calc(100% + 50px);
   }
 
   .modal-page-container:not(.active) {
