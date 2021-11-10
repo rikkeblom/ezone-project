@@ -26,12 +26,16 @@
   height: 40px;
   align-self: center;
   display: block;
-  border-radius: 140px;
+  border-radius: 5px;
   border: 0px;
   background-color: colors.$green-color;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: all 0.3s ease-in;
+  margin-top: 18px;
+  box-shadow: -2px 3px 1px 0px #5d735d;
+  -webkit-box-shadow: -2px 3px 1px 0px #5d735d;
+  -moz-box-shadow: -2px 3px 1px 0px #5d735d;
 }
 
 .button-main:hover {

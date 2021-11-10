@@ -4,23 +4,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 50px;
 
   form {
-    padding-top: 30px;
+    padding-top: 40px;
     display: flex;
     flex-direction: column;
 
     .input-container {
       position: relative;
-      margin-bottom: 1.4rem;
+      margin-bottom: 0.5rem;
 
       input {
-        height: 1.5rem;
+        height: 1.7rem;
         border-radius: 5px;
         letter-spacing: 0.5px;
         padding-left: 5px;
-        width: 230px;
+        width: 285px;
       }
 
       label.placeholder {
