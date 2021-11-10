@@ -13,7 +13,7 @@ body {
 .modal-container {
   font-family: "Shapiro regular";
   padding-top: 100px;
-  height: 500px;
+  height: 540px;
   width: 500px;
   display: flex;
   flex-direction: row;
@@ -41,6 +41,7 @@ body {
 
   h2 {
     color: colors.$orange-color;
+    text-align: center;
   }
 
   p {
@@ -70,14 +71,30 @@ body {
   width: 400px;
 }
 
-.modal-page-container:not(.active) > * {
+.modal-page-container:not(.active) > .modal-page {
   display: none !important;
+}
+
+.modal-page-container:not(.active) {
+  .button-close {
+    display: none !important;
+  }
+
+  .steps-container {
+    align-self: center;
+  }
 }
 
 fieldset {
   display: flex;
   flex-direction: column;
   border: 0px;
+  align-items: center;
+
+  legend {
+    text-align: center;
+    font-size: 0.8rem;
+  }
 }
 
 @media only screen and (max-width: 600px) {

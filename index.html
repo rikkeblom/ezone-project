@@ -76,15 +76,19 @@
                   <div class="requirements">Password did not match.</div>
                 </div>
 
-                <button type="submit" class="button-main">Continue</button>
+                <button type="submit" class="button-main" id="button-continue">
+                  Continue
+                </button>
               </form>
             </div>
             <div class="steps-container">1</div>
           </div>
+
           <div class="modal-page-container active">
+            <a href="#" class="button-close">✖</a>
             <div class="modal-page">
               <h2>Personalize</h2>
-              <p>description text</p>
+              <p>How do you want personalize your content?</p>
               <div class="filter-quiz-container">
                 <input
                   name="filter-quiz-radio"
@@ -101,7 +105,7 @@
                     data-width="40"
                     data-height="40"
                   ></span>
-                  Choose topics yourself
+                  Choose topics
                 </label>
 
                 <input
@@ -242,13 +246,19 @@
                       </div>
                     </section>
                     <div>
-                      <button type="submit">Save my choices</button>
+                      <button
+                        type="submit"
+                        class="button-main"
+                        id="button-choices"
+                      >
+                        Save choices
+                      </button>
                     </div>
                   </fieldset>
                 </form>
               </section>
               <section class="quiz-container hidden">
-                <div class="question1 hidde">
+                <div class="question1">
                   <p>1/8</p>
                   <span class="iconify" data-icon="ph:game-controller"></span>
                   <p>
@@ -448,8 +458,12 @@
                       </div>
                     </label>
                   </div>
-                  <button>Previous</button>
-                  <button>Next</button>
+                  <button class="button-question" id="button-question-prev">
+                    Previous
+                  </button>
+                  <button class="button-question" id="button-question-next">
+                    Next
+                  </button>
                 </div>
                 <div class="question3 hidden">
                   <p>3/8</p>
@@ -480,8 +494,12 @@
                       </div>
                     </label>
                   </div>
-                  <button>Previous</button>
-                  <button>Next</button>
+                  <button class="button-question" id="button-question-prev">
+                    Previous
+                  </button>
+                  <button class="button-question" id="button-question-next">
+                    Next
+                  </button>
                 </div>
                 <div class="question4 hidden">
                   <p>4/8</p>
@@ -493,8 +511,12 @@
                     >
                     <p>?</p>
                   </div>
-                  <button>Previous</button>
-                  <button>Next</button>
+                  <button class="button-question" id="button-question-prev">
+                    Previous
+                  </button>
+                  <button class="button-question" id="button-question-next">
+                    Next
+                  </button>
                 </div>
                 <div class="question5 hidden">
                   <p>5/8</p>
@@ -519,8 +541,12 @@
                       </div>
                     </label>
                   </div>
-                  <button>Previous</button>
-                  <button>Next</button>
+                  <button class="button-question" id="button-question-prev">
+                    Previous
+                  </button>
+                  <button class="button-question" id="button-question-next">
+                    Next
+                  </button>
                 </div>
                 <div class="question6 hidden">
                   <p>6/8</p>
@@ -548,8 +574,12 @@
                       </div>
                     </label>
                   </div>
-                  <button>Previous</button>
-                  <button>Next</button>
+                  <button class="button-question" id="button-question-prev">
+                    Previous
+                  </button>
+                  <button class="button-question" id="button-question-next">
+                    Next
+                  </button>
                 </div>
                 <div class="question7 hidden">
                   <p>7/8</p>
@@ -567,8 +597,12 @@
                     >
                     <p>?</p>
                   </div>
-                  <button>Previous</button>
-                  <button>Next</button>
+                  <button class="button-question" id="button-question-prev">
+                    Previous
+                  </button>
+                  <button class="button-question" id="button-question-next">
+                    Next
+                  </button>
                 </div>
                 <div class="question8 hidden">
                   <p>8/8</p>
@@ -596,13 +630,19 @@
                       </div>
                     </label>
                   </div>
-                  <button>Previous</button>
-                  <button>Get Result</button>
+                  <button class="button-question" id="button-question-prev">
+                    Previous
+                  </button>
+                  <button class="button-question" id="button-question-next">
+                    Next
+                  </button>
                 </div>
               </section>
             </div>
+            <div class="steps-container">2</div>
           </div>
-          <div class="modal-page-container active">
+
+          <div class="modal-page-container">
             <a href="#" class="button-close">✖</a>
             <div class="modal-page" id="third-modal">
               <img class="check-icon" src="assets/check.png" alt="check icon" />
@@ -616,7 +656,9 @@
                 <div class="topic">Hearing</div>
                 <div class="topic">Nutrition</div>
               </div>
-              <button type="submit" class="button-main">Done</button>
+              <button type="submit" class="button-main" id="button-finish">
+                Done
+              </button>
               <p>
                 *You can always change your preferences in your
                 <a href="">account settings</a>.
