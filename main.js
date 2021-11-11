@@ -34,8 +34,10 @@ document.querySelector(".question7 button:first-of-type").addEventListener("clic
 document.querySelector(".question8 button:first-of-type").addEventListener("click", previousQuestion);
 
 import { readFiltersFromLocalStorage } from "./modules/show-results";
+import { hideCurrentModalAndUnhideNext } from "./modules/modal-hide-unhide";
 document.querySelector(".end-quiz").addEventListener("click", readFiltersFromLocalStorage);
 document.querySelector(".end-filter").addEventListener("click", readFiltersFromLocalStorage);
-
+document.querySelector(".end-quiz").addEventListener("click", hideCurrentModalAndUnhideNext);
+document.querySelector(".end-filter").addEventListener("click", hideCurrentModalAndUnhideNext);
 document.querySelector(".question4 input[type=range]").addEventListener("input", showRange);
 document.querySelector(".question7 input[type=range]").addEventListener("input", showRange);
