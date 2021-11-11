@@ -2,7 +2,7 @@
 @use "../themes/theme";
 
 body {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.637);
   background-image: theme.$background-image;
   background-repeat: no-repeat;
   padding: 100px;
