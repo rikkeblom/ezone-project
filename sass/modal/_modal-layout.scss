@@ -27,7 +27,6 @@ body {
 
 .modal-container {
   font-family: "Shapiro regular";
-  padding-top: 100px;
   height: 600px;
   width: 530px;
   display: flex;
@@ -122,6 +121,10 @@ fieldset {
     padding: 100px;
     height: 100vh;
     background-size: cover;
+  }
+
+  .modal-container {
+    padding-top: 50px;
   }
 
   .modal-page-container.active {
