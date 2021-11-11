@@ -144,3 +144,16 @@ fieldset {
     margin: 245% 0% 0 20%;
   }
 }
+
+.start-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  button.button-cta {
+    display: block;
+    margin: calc(25vh + 25vw) auto 0 auto;
+  }
+}
