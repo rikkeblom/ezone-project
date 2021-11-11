@@ -1,5 +1,11 @@
 @use "../base/colors";
 
+.modal-page-container:first-of-type {
+  background-image: url("./assets/svg/pill.svg");
+  background-position: -60% 200%;
+  background-repeat: no-repeat;
+}
+
 #first-modal {
   display: flex;
   flex-direction: column;
