@@ -10,11 +10,11 @@ body {
   background-size: cover;
 }
 
-.modal-page {
-  animation-name: show;
-  animation-duration: 0.5s;
-  animation-iteration-count: 1;
-}
+// .modal-page {
+//   animation-name: show;
+//   animation-duration: 0.5s;
+//   animation-iteration-count: 1;
+// }
 
 @keyframes show {
   from {
@@ -52,8 +52,7 @@ body {
   background-color: colors.$background-color;
   -webkit-box-shadow: 0px 0px 4px 4px colors.$blue-color;
   -moz-box-shadow: 0px 0px 4px 4px colors.$blue-color;
-  box-shadow: 0px 0px 4px 2px colors.$blue-color,
-    colors.$blue-color 0px 0px 4px 0px inset;
+  box-shadow: 0px 0px 4px 2px colors.$blue-color, colors.$blue-color 0px 0px 4px 0px inset;
   transition: 0.3s ease-in;
 
   h2 {
