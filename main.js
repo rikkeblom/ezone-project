@@ -1,5 +1,14 @@
 import "./style.scss";
 
+//OPEN/CLOSE MODAL
+//open
+document.querySelector(".button-cta").addEventListener("click", openModal);
+//close
+document.querySelector("#button-finish").addEventListener("click", closeModal);
+document.querySelectorAll(".button-close").forEach((button) => {
+  button.addEventListener("click", closeModal);
+});
+
 //SIGN-UP FORM
 import { submitForm } from "./modules/sign-up-form";
 
@@ -34,7 +43,7 @@ document.querySelector(".question7 button:first-of-type").addEventListener("clic
 document.querySelector(".question8 button:first-of-type").addEventListener("click", previousQuestion);
 
 import { readFiltersFromLocalStorage } from "./modules/show-results";
-import { hideCurrentModalAndUnhideNext } from "./modules/modal-hide-unhide";
+import { hideCurrentModalAndUnhideNext, openModal, closeModal } from "./modules/modal-hide-unhide";
 document.querySelector(".end-quiz").addEventListener("click", readFiltersFromLocalStorage);
 document.querySelector(".end-filter").addEventListener("click", readFiltersFromLocalStorage);
 document.querySelector(".end-quiz").addEventListener("click", hideCurrentModalAndUnhideNext);
